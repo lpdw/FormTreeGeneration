@@ -10,12 +10,18 @@
 	<meta name="author" content="Codrops" />
 	<link rel="shortcut icon" href="../favicon.ico">
 	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.5.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
 	<link rel="stylesheet" type="text/css" href="css/cs-select.css" />
 	<link rel="stylesheet" type="text/css" href="css/cs-skin-boxes.css" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
+			<link rel="stylesheet" type="text/css" href="css/icons.css" />
+
 	<script src="js/modernizr.custom.js"></script>
 </head>
 <body>
@@ -25,79 +31,63 @@
 			<div class="fs-title">
 				<h1>TreeGeneration</h1>
 			</div>
-		<p>
-			<canvas align="center"class="tree" height="600" />
-		</p>
-		<a href="formulaire.html">
-			<button align="center" class="btn btn-info pull-right">Commencer</button>
-		</a>
-</div>
-	</div><!-- /container -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-	<script src="js/classie.js"></script>
-	<script src="js/selectFx.js"></script>
-	<script src="js/fullscreenForm.js"></script>
-	<script type="text/javascript"  src="js/tree.js"></script>
-	x
-	<script>
-	var TxtType = function(el, toRotate, period) {
-		this.toRotate = toRotate;
-		this.el = el;
-		this.loopNum = 0;
-		this.period = parseInt(period, 10) || 2000;
-		this.txt = '';
-		this.tick();
-		this.isDeleting = false;
-	};
+			<form id="myform" class="fs-form fs-form-full" autocomplete="off">
 
-	TxtType.prototype.tick = function() {
-		var i = this.loopNum % this.toRotate.length;
-		var fullTxt = this.toRotate[i];
+				<ol class="fs-fields">
 
-		if (this.isDeleting) {
-			this.txt = fullTxt.substring(0, this.txt.length - 1);
-		} else {
-			this.txt = fullTxt.substring(0, this.txt.length + 1);
-		}
+							<li data-input-trigger>
+								<label class="fs-field-label fs-anim-upper" for="q3" data-info="Un j'aime nous fera le plus grand plaisir">Que pensez-vous de cet évènement?</label>
+								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+									<span><input id="q3b" name="q3" type="radio" value="conversion"/><label for="q3b" class="radio-conversion">Sell things</label></span>
+									<span><input id="q3c" name="q3" type="radio" value="social"/><label for="q3c" class="radio-social">Become famous</label></span>
+									<span><input id="q3a" name="q3" type="radio" value="mobile"/><label for="q3a" class="radio-mobile">Mobile market</label></span>
+								</div>
+							</li>
+							<li data-input-trigger>
+								<label class="fs-field-label fs-anim-upper" for="q3" data-info="Un j'aime nous fera le plus grand plaisir">Que pensez-vous de cet évènement?</label>
+								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+									<span><input id="q3b" name="q3" type="radio" value="conversion"/><label for="q3b" class="radio-conversion">Sell things</label></span>
+									<span><input id="q3c" name="q3" type="radio" value="social"/><label for="q3c" class="radio-social">Become famous</label></span>
+									<span><input id="q3a" name="q3" type="radio" value="mobile"/><label for="q3a" class="radio-mobile">Mobile market</label></span>
+								</div>
+							</li>
 
-		this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+				</ol><!-- /fs-fields -->
 
-		var that = this;
-		var delta = 200 - Math.random() * 100;
+			</section>
+			<button class="fs-submit" type="submit">Envoyez</button>
+		</form><!-- /fs-form -->
+	</div><!-- /fs-form-wrap -->
 
-		if (this.isDeleting) { delta /= 2; }
 
-		if (!this.isDeleting && this.txt === fullTxt) {
-			delta = this.period;
-			this.isDeleting = true;
-		} else if (this.isDeleting && this.txt === '') {
-			this.isDeleting = false;
-			this.loopNum++;
-			delta = 500;
-		}
+</div><!-- /container -->
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/selectFx.js"></script>
+<script src="js/fullscreenForm.js"></script>
+<script src="js/mo.min.js"></script>
+<script>
+(function() {
+	var formWrap = document.getElementById( 'fs-form-wrap' );
 
-		setTimeout(function() {
-			that.tick();
-		}, delta);
-	};
-
-	window.onload = function() {
-		var elements = document.getElementsByClassName('typewrite');
-		for (var i=0; i<elements.length; i++) {
-			var toRotate = elements[i].getAttribute('data-type');
-			var period = elements[i].getAttribute('data-period');
-			if (toRotate) {
-				new TxtType(elements[i], JSON.parse(toRotate), period);
+	[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
+		new SelectFx( el, {
+			stickyPlaceholder: false,
+			onChange: function(val){
+				document.querySelector('span.cs-placeholder').style.backgroundColor = val;
 			}
+		});
+	} );
+
+	new FForm( formWrap, {
+		onReview : function() {
+			classie.add( document.body, 'overview' ); // for demo purposes only
 		}
-		// INJECT CSS
-		var css = document.createElement("style");
-		css.type = "text/css";
-		css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-		document.body.appendChild(css);
-	};
-
-	</script>
-
+	} );
+})();
+</script>
 </body>
 </html>
