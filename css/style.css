@@ -2,7 +2,7 @@
 @font-face {
 	font-weight: normal;
 	font-style: normal;
-		font-family: 'Indie Flower';
+	font-family: 'Indie Flower';
 
 }
 
@@ -15,7 +15,7 @@ html, body, .container {
 }
 
 body {
-	/*background: #3b3f45;*/
+	background: #3b3f45;
 	color: #fff;
 	font-weight: 400;
 	font-size: 1em;
@@ -337,7 +337,7 @@ a:hover, a:focus {
 	counter-increment: gridcounter;
 	text-align: center;
 	color: #2b2929;
-		font-family: 'Indie Flower', Arial, sans-serif;
+	font-family: 'Indie Flower', Arial, sans-serif;
 	-webkit-transform: translate3d(0.2em,50%,0);
 	transform: translate3d(0.2em,50%,0);
 }
@@ -426,51 +426,55 @@ a:hover, a:focus {
 
 
 .row {
-width: 100%;
-margin-left: auto;
-margin-right: auto;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 
-  *zoom: 1; }
+	*zoom: 1; }
 
-.row:before,
-.row:after {
-  display: table;
-  content: " ";
-}
+	.row:before,
+	.row:after {
+		display: table;
+		content: " ";
+	}
 
-.row:after {
- clear: both;
-}
-
-
-.icon-container {
-width: 80%;
-height: auto;
-margin-top: 10px;
-padding: 14px 60px;
-
-}
-
-.col-box {
-height: 200px;
-width: 33.33333%;
-position: relative;
-float: left;
-
-}
+	.row:after {
+		clear: both;
+	}
 
 
-.icon-box {
-height: 200px;
-width: 50%;
-background: ;
-position: absolute;
-margin: -100px 0 0 -100px;
-left: 50%;
-top: 50%;
-}
+	.icon-container {
+		width: 80%;
+		height: auto;
+		margin-top: 10px;
+		padding: 14px 60px;
 
-.icon-box svg {
-height: 100%;
-width: 100%;
-}
+	}
+
+	.col-box {
+		height: 200px;
+		width: 33.33333%;
+		position: relative;
+		float: left;
+
+	}
+
+
+	.icon-box {
+		height: 200px;
+		width: 85%;
+		padding: 12px;
+		background: ;
+		position: absolute;
+		margin: -97px 0 0 -85px;
+		left: 50%;
+		top: 50%;
+	}
+
+	.icon-box svg {
+		height: 100%;
+		width: 100%;
+	}
+ svg:hover {
+	 fill: #111;
+	}

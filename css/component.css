@@ -3,7 +3,7 @@
 	position: relative;
 	width: 100%;
 	height: 100%;
-	color: #6b7070;
+	color: #fff ;
 }
 
 .overview .fs-form-wrap {
@@ -292,16 +292,11 @@ button.fs-continue,
 }
 
 .fs-fields > li .fs-radio-custom span {
-	float: left;
-	position: relative;
-	margin-right: 3%;
-	padding: 10px;
 	max-width: 200px;
 	width: 30%;
 	text-align: center;
 	font-weight: 700;
-	font-size: 50%;
-		font-family: 'Indie Flower', Arial, sans-serif;
+	font-family: 'Indie Flower', Arial, sans-serif;
 }
 
 .fs-fields > li .fs-radio-custom span label {
@@ -320,7 +315,8 @@ button.fs-continue,
 
 .fs-fields > li .fs-radio-custom label {
 	display: block;
-	padding-top: 100%;
+  padding-top: 118%;
+	/*margin-left: 12px;*/
 	width: 100%;
 	height: 100%;
 	cursor: pointer;
@@ -343,17 +339,7 @@ button.fs-continue,
 	transform: translate(-50%,-50%);
 }
 
-.fs-fields .fs-radio-custom label.radio-mobile::after {
-	background-image: url(../img/mobile.svg);
-}
 
-.fs-fields .fs-radio-custom label.radio-social::after {
-	background-image: url(../img/social.svg);
-}
-
-.fs-fields .fs-radio-custom label.radio-conversion::after {
-	background-image: url(../img/conversion.svg);
-}
 
 .fs-fields .fs-radio-custom label:hover::after,
 .fs-fields input[type="radio"]:focus + label::after,
@@ -366,7 +352,11 @@ button.fs-continue,
 }
 
 .fs-form-overview .fs-fields .fs-radio-custom input[type="radio"]:checked + label {
-	color: rgba(0,0,0,0.8);
+	    color: #03A9F4;
+}
+
+.fs-form-overview svg{
+	fill:#03A9F4;
 }
 
 .fs-fields textarea {
@@ -626,10 +616,10 @@ button.fs-continue,
 button.fs-submit,
 button.fs-continue {
 	padding: 0.6em 1.5em;
-	border: 3px solid #6b7070;
+	border: 3px solid #fff;
 	border-radius: 40px;
 	font-weight: 700;
-	color: rgba(0,0,0,0.4);
+
 }
 
 .fs-form-overview .fs-submit,
@@ -639,8 +629,8 @@ button.fs-continue {
 }
 
 .fs-form-overview .fs-submit {
-	border-color: #6b7070;
-	color: #6b7070;
+	border-color: #fs-form-full;
+	color: #fff;
 }
 
 button.fs-continue {
@@ -654,7 +644,7 @@ button.fs-continue {
 button.fs-submit:hover,
 button.fs-submit:focus,
 button.fs-continue:hover {
-	color: #6b7070;
+	color: #fff;
 
 }
 
@@ -667,7 +657,6 @@ button.fs-continue:hover {
 	text-align: center;
 	background: transparent;
 	color: rgba(0,0,0,0.3);
-	content: 'or press ENTER';
 	font-size: 0.65em;
 	pointer-events: none;
 }

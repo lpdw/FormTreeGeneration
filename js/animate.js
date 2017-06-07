@@ -1,8 +1,9 @@
 function animateIt(elementId) {
 
 				var elem = document.getElementById(elementId);
-				elem.style.stroke = "#ffffff ";
+
 				var length = elem.getTotalLength();
+				elem.style.stroke = "#ffffff ";
 				elem.style.strokeDasharray = length;
 				elem.style.strokeDashoffset = length;
 				var half = length/2;
