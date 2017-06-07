@@ -3,7 +3,7 @@
 	position: relative;
 	width: 100%;
 	height: 100%;
-	color: #fff;
+	color: #6b7070;
 }
 
 .overview .fs-form-wrap {
@@ -51,7 +51,7 @@
 	padding: 2.5em 30% 6em;
 	width: 100%;
 	height: 100%;
-	background: #fffed8;
+
 	color: #3b3f45;
 	font-size: 1.2em;
 }
@@ -84,6 +84,7 @@
 .fs-form.fs-show .fs-fields {
 	-webkit-animation: animMove 0.5s;
 	animation: animMove 0.5s;
+	    margin-top: 50px;
 }
 
 @-webkit-keyframes animMove {
@@ -198,7 +199,7 @@ button.fs-continue,
 	font-weight: 700;
 	font-style: italic;
 	font-size: 14px;
-	font-family: Georgia, serif;
+		font-family: 'Indie Flower', Arial, sans-serif;
 	line-height: 20px;
 	cursor: pointer;
 	pointer-events: auto;
@@ -244,7 +245,7 @@ button.fs-continue,
 	border: none;
 	border-bottom: 2px solid rgba(0,0,0,0.2);
 	background-color: transparent;
-	color: #fffed8;
+	color: #03a9f4;
 	text-overflow: ellipsis;
 	font-weight: bold;
 	font-size: 1.5em;
@@ -272,7 +273,7 @@ button.fs-continue,
 }
 
 .fs-form-overview .fs-fields input:focus {
-	background-color: #fffed8; /* Fixes chrome bug with placeholder */
+	background-color: #03a9f4; /* Fixes chrome bug with placeholder */
 }
 
 .fs-form-overview .fs-fields input {
@@ -300,7 +301,7 @@ button.fs-continue,
 	text-align: center;
 	font-weight: 700;
 	font-size: 50%;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-family: 'Indie Flower', Arial, sans-serif;
 }
 
 .fs-fields > li .fs-radio-custom span label {
@@ -361,7 +362,7 @@ button.fs-continue,
 }
 
 .fs-fields .fs-radio-custom input[type="radio"]:checked + label {
-	color: #fffed8;
+	color: #03a9f4;
 }
 
 .fs-form-overview .fs-fields .fs-radio-custom input[type="radio"]:checked + label {
@@ -374,7 +375,7 @@ button.fs-continue,
 	height: 200px;
 	border: 2px solid rgba(0,0,0,0.2);
 	background-color: transparent;
-	color: #fffed8;
+	color: #03a9f4;
 	font-weight: 700;
 	font-size: 0.85em;
 	resize: none;
@@ -395,7 +396,7 @@ button.fs-continue,
 }
 
 .fs-form-overview .fs-fields textarea:focus {
-	background: #fffed8;
+	background: #03a9f4;
 }
 
 .fs-form div.cs-select.cs-skin-boxes {
@@ -506,7 +507,7 @@ button.fs-continue,
 
 .fs-nav-dots button:hover::before,
 .fs-nav-dots button.fs-dot-current::before {
-	background: #fffed8;
+	background: #03a9f4;
 }
 
 /* Progress bar */
@@ -515,7 +516,7 @@ button.fs-continue,
 	top: 0;
 	width: 0%;
 	height: 0.5em;
-	background: #fffed8;
+	background: #03a9f4;
 	-webkit-transition: width 0.3s ease-in-out;
 	transition: width 0.3s ease-in-out;
 }
@@ -531,7 +532,7 @@ button.fs-continue,
 	width: 2em;
 	font-weight: 700;
 	font-size: 2em;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-family: 'Indie Flower', Arial, sans-serif;
 	cursor: default;
 }
 
@@ -625,7 +626,7 @@ button.fs-continue,
 button.fs-submit,
 button.fs-continue {
 	padding: 0.6em 1.5em;
-	border: 3px solid #232529;
+	border: 3px solid #6b7070;
 	border-radius: 40px;
 	font-weight: 700;
 	color: rgba(0,0,0,0.4);
@@ -638,8 +639,8 @@ button.fs-continue {
 }
 
 .fs-form-overview .fs-submit {
-	border-color: #232529;
-	color: #232529;
+	border-color: #6b7070;
+	color: #6b7070;
 }
 
 button.fs-continue {
@@ -653,8 +654,8 @@ button.fs-continue {
 button.fs-submit:hover,
 button.fs-submit:focus,
 button.fs-continue:hover {
-	background: #232529;
-	color: #fff;
+	color: #6b7070;
+
 }
 
 .fs-continue::after {

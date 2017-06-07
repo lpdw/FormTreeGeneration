@@ -98,7 +98,9 @@
     }
 
     function draw(ctx) {
-        ctx.fillStyle = '#3b3f45';
+        ctx.fillStyle = '#ffffff';
+        ctx.strokeText("Exemple de texte", 10, 20);
+         tx.fillText("Autre exemple", 50, 60);
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         each(branches, function(branch) {
