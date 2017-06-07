@@ -422,3 +422,55 @@ a:hover, a:focus {
 .avis {
 	display: flex;
 }
+
+
+
+.row {
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+
+  *zoom: 1; }
+
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+
+.row:after {
+ clear: both;
+}
+
+
+.icon-container {
+width: 80%;
+height: auto;
+margin-top: 10px;
+padding: 14px 60px;
+
+}
+
+.col-box {
+height: 200px;
+width: 33.33333%;
+position: relative;
+float: left;
+
+}
+
+
+.icon-box {
+height: 200px;
+width: 50%;
+background: ;
+position: absolute;
+margin: -100px 0 0 -100px;
+left: 50%;
+top: 50%;
+}
+
+.icon-box svg {
+height: 100%;
+width: 100%;
+}
