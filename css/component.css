@@ -113,7 +113,8 @@ button.fs-continue,
 
 .fs-form li{
 	background-color: white;
-	    padding: 37px;
+	padding: 37px;
+	border-radius: 12px;
 }
 .fs-show {
 	visibility: visible !important;
